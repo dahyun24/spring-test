@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: swagger
+  datasource:
+    url: jdbc:mysql://mysql:3306/testdb
+    username: testuser
+    password: test1234
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    hikari:
+      initialization-fail-timeout: 60000  # 최대 60초까지 재시도
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+     hibernate:
+      format_sql: true
+    show-sql: true
+
+slack:
+  bot-token: xxxx-xxxx
+
+huggingface:
+  api-key: xxxx-xxxx
+
+springdoc:
+  default-produces-media-type: application/json
+  default-consumes-media-type: application/json
